@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>♡ コンプチェッカー ♡ v2.4 iPhone Safari対応</title>
+<title>♡ コンプチェッカー ♡ 完成版 iPhone Safari対応</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;background:#fff7fc;color:#4a3b45}
@@ -76,76 +76,6 @@ header p{margin:6px 0 0;font-size:14px}
 </head>
 <body>
 
-<header>
-<h1>♡ コンプチェッカー ♡</h1>
-<p id="setSubtitle">アイカツ！アンコール 全カード</p>
-</header>
-
-<div class="auth-box">
-<div class="auth-panel">
-<div class="auth-info"><strong id="authUser">Googleログインしていません</strong><div id="authStatus" class="auth-status">端末内に自動保存されています</div></div>
-<div id="authActions"><button class="auth-button google" type="button" onclick="loginWithGoogle()">🔵 Googleでログイン</button></div>
-</div>
-</div>
-
-<div class="set-selector-wrap">
-<label for="setSelector">弾を選択</label>
-<select id="setSelector" class="set-selector" onchange="switchSet(this.value)">
-<option value="all">すべて</option>
-<option value="e1">1弾</option>
-<option value="e2">2弾</option>
-<option value="e3">3弾</option>
-<option value="e4">4弾</option>
-<option value="e5">5弾</option>
-<option value="e6">6弾</option>
-<option value="promo">プロモーション</option>
-</select>
-</div>
-
-<div class="container">
-<div class="progress-box">
-<div>コンプリート率</div>
-<div class="progress-text" id="percent">0%</div>
-<div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
-<div id="count">0 / 85 枚</div>
-</div>
-
-<input class="search" id="search" type="text" placeholder="🔍 カード番号を検索">
-
-<div class="controls">
-<button class="active" onclick="setFilter('all',this)">すべて</button>
-<button onclick="setFilter('have',this)">所持</button>
-<button onclick="setFilter('want',this)">欲しいもの</button>
-</div>
-
-<div class="cards" id="cards"></div>
-
-<div class="actions">
-<button onclick="makeList('want')">欲しいものリストを画像化</button>
-<button onclick="makeList('have')">所持カードリストを画像化</button>
-</div>
-
-<button class="reset" onclick="resetData()">データをリセット</button>
-</div>
-
-<div class="modal" id="modal">
-<div class="sheet">
-<h2 id="modalTitle">カード</h2>
-<div style="font-size:13px;color:#777;margin-bottom:6px">このカードの状態を選んでください</div>
-<div class="choice">
-<button id="noneBtn" onclick="chooseType('none')">未設定</button>
-<button id="wantBtn" onclick="chooseType('want')">♡ 欲しいもの</button>
-<button id="haveBtn" onclick="chooseType('have')">📦 所持数</button>
-</div>
-<input class="qty" id="qty" type="number" min="0" max="99" value="1" placeholder="所持数">
-<div class="sheet-actions">
-<button class="cancel" onclick="closeModal()">キャンセル</button>
-<button class="save" onclick="saveCard()">保存</button>
-</div>
-</div>
-</div>
-
-<body>
 
 <header>
 <h1>♡ コンプチェッカー ♡</h1>
